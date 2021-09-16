@@ -27,6 +27,7 @@ var (
 	myId int64
 )
 
+// PlateTransmitMulti 并行传输数据
 type PlateTransmitMulti struct{}
 
 // NewTransmitMulti 实例化
