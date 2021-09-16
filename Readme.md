@@ -1,5 +1,6 @@
 [![GoDoc](https://godoc.org/github.com/lengpucheng/shear-plate-transmit?status.svg)](https://pkg.go.dev/github.com/lengpucheng/shear-plate-transmit)
 [![Go Report Card](https://goreportcard.com/badge/github.com/lengpucheng/shear-plate-transmit)](https://goreportcard.com/report/github.com/lengpucheng/shear-plate-transmit)
+[![License](https://img.shields.io/github/license/lengpucheng/shear-plate-transmit)](https://github.com/lengpucheng/shear-plate-transmit/blob/master/LICENSE)
 <center><h1>SHEAR-PLATE-TRANSMIT（SPT）</h1></center>
 
 **SPT可以使用剪切板作为中介来传输数据，可以应用在某些跨平台设备只能传输文本的场景下实现任意数据的传输**
