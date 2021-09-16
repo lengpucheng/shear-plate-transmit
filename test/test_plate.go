@@ -16,6 +16,7 @@ import (
 	"io/ioutil"
 )
 
+// ReadTest 读取测试
 func ReadTest() {
 	old := ""
 	for {
@@ -30,6 +31,7 @@ func ReadTest() {
 	}
 }
 
+// WriteFileTest 写文件测试
 func WriteFileTest(path string) {
 	file, err := ioutil.ReadFile(path)
 	if err != nil {
@@ -38,10 +40,12 @@ func WriteFileTest(path string) {
 	WriteByteTest(file)
 }
 
+// WriteByteTest 写byte测试
 func WriteByteTest(data []byte) {
 	WriteTest(string(data))
 }
 
+// WriteTest 写测试
 func WriteTest(str string) {
 	err := clipboard.WriteAll(str)
 	if err != nil {

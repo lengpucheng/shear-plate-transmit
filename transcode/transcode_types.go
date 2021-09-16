@@ -11,6 +11,7 @@
 
 package transcode
 
+// TFData 传输文件结构体
 type TFData struct {
 	Name string
 	Val  []byte

@@ -21,6 +21,7 @@ var lastID int64
 // 回执获取尝试次数
 const trySum = 100
 
+// PlateTransmitSingle 串行传输
 type PlateTransmitSingle struct{}
 
 // NewTransmitSingle 实例化
@@ -58,15 +59,14 @@ func (t *PlateTransmitSingle) Send(data []byte) {
 	}
 	total := int64(len(data))
 	var s int64 = 0
-	var e int64 = 0
+	var e int64
 	for {
 		if total-s <= GetMaxSize() {
 			pack := NewDataPack(total, total, data[s:], true)
 			showProcess(&pack)
 			writeTry(&pack)
-			e = total
 			log.Println("数据发送完成")
-			return
+			break
 		} else {
 			e = s + GetMaxSize()
 			pack := NewDataPack(e, total, data[s:e], false)
@@ -91,7 +91,7 @@ func writeTry(pack *DataPack) {
 // 获取回执
 func getCallBack() bool {
 	var sum = 0
-	for ; sum <= trySum; {
+	for sum <= trySum {
 		pack := read()
 		if pack != nil && pack.Id != 0 && pack.ReBack && lastID != pack.Id {
 			lastID = pack.Id

@@ -62,6 +62,7 @@ func send(name string) {
 	}
 }
 
+// WriteSendTest 写发送测试
 func WriteSendTest(path string) {
 	file, err := ioutil.ReadFile(name)
 	if err != nil {

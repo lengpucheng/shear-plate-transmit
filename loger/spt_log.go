@@ -16,9 +16,11 @@ import (
 	"os"
 )
 
+// Logger 结构体
 type Logger struct {
 }
 
+// Log 日志实例
 var Log *Logger
 var logger *log.Logger
 

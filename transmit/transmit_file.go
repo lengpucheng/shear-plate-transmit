@@ -16,10 +16,12 @@ import (
 	"github.com/lengpucheng/shear-plate-transmit/transcode"
 )
 
+// TransFile 文件传输对象
 type TransFile struct {
 	transmit coreplate.PlateTransmit
 }
 
+// NewTransmitFile 实例化文件传输对象
 func NewTransmitFile(plateTransmit coreplate.PlateTransmit) TransFile {
 	return TransFile{transmit: plateTransmit}
 }

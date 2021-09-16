@@ -1,9 +1,6 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/lengpucheng/shear-plate-transmit)](https://goreportcard.com/report/github.com/lengpucheng/shear-plate-transmit)
-
 <center><h1>SHEAR-PLATE-TRANSMIT（SPT）</h1></center>
-
 **SPT可以使用剪切板作为中介来传输数据，可以应用在某些跨平台设备只能传输文本的场景下实现任意数据的传输**
-
 + 😘仅需要使用接口下的send()和receive()发放即可完成数据承载收发
 + 😃提供串行和并行两种方式传输的选择
 + 😊自带文件读取-编码-传输-接收-解码-还原的实现应用
