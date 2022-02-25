@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"github.com/lengpucheng/shear-plate-transmit/coreplate"
 	"github.com/lengpucheng/shear-plate-transmit/transmit"
 )
@@ -18,6 +19,7 @@ func init() {
 
 func main() {
 	flag.Parse()
+	fmt.Println(Test())
 	single := coreplate.NewTransmitSingle()
 	trans := transmit.NewTransmitFile(&single)
 	if t {
@@ -25,4 +27,8 @@ func main() {
 	} else {
 		trans.Download(p)
 	}
+}
+
+func Test() string {
+	return "ok"
 }
